@@ -1,5 +1,6 @@
 
 import { GeoForm } from '@/components/GeoForm';
+import { Person } from '@/components/Person';
 
 
 
@@ -9,7 +10,7 @@ const Page = () => {
     <h1>Olá Mundo</h1>
     <h3>Algum texto qualquer</h3>
 
-    <GeoForm />
+    <Person />
     </div>
   );
 }
