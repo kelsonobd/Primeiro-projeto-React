@@ -4,23 +4,27 @@ const getWeekDay = (today: Date) => {
 }
 
 export const Person = () => {
-    const name: string = 'Lana Del Rey';
-    const avatar: string = '';
-    const today: Date = new Date();
+    const data = {
+     name: 'Lana Del Rey',
+    avatar:'',
+    roles: ['Cantora', 'Compositora']
+    }
+
+const today: Date = new Date();
 
     return (
         <div>
-            <h1>Name: {name} - {getWeekDay()}</h1>
+            <h1>Name: {data.name} - {getWeekDay(today)}</h1>
             <img
-                src={avatar}
-                alt={name}
+                src={data.avatar}
+                alt={data.name}
                 className="w-40 h-40"
             />
             <ul>
                 <li>Singer</li>
                 <li> 39 old years</li>
-                <li>Compositor</li>
-                <li>Actriz</li>
+                <li>{data.roles[1]}</li>
+                <li>{data.roles[0]}</li>
             </ul>
         </div>
 
