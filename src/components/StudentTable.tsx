@@ -20,19 +20,19 @@ export const StudentTable = ({ students }: Props) => {
                 {students.map(item => (
                     <tr key={item.id} className="text-grey-800 bg-gray-400 border-b border-gray-600"> 
                         <td className="p-3 flex items-center">
-                            <img src={item.avatar} alt={item.name} />
+                            <img src={item.avatar} alt={item.name} className="w-10 h-10 rounded-full mr-3" />
                             <div>
-                                <div>{item.name}</div>
+                                <div className="font-bold">{item.name}</div>
                                 <div>{item.email}</div>
                             </div>
                         </td>
-                        <td>
-                        {item.active && <div>Active</div>}
-                        {!item.active && <div>Inactive</div>}
+                        <td className="p-3">
+                        {item.active && <div className="px-2 py-1 inline-block rounded-md border border-green-800 bg-green-600 text-white text-xs">Active</div>}
+                        {!item.active && <div className="px-2 py-1 inline-block rounded-md border border-red-800 bg-red-600 text-white text-xs">Inactive</div>}
                         </td>
-                        <td>{item.grade1}</td>
-                        <td>{item.grade2}</td>
-                        <td>{item.active ? ((item.grade1 + item.grade2) / 2).toFixed(1):'--'}</td>
+                        <td className="p-3">{item.grade1.toFixed(1)}</td>
+                        <td className="p-3">{item.grade2.toFixed(1)}</td>
+                        <td className="p-3 font-bold">{item.active ? ((item.grade1 + item.grade2) / 2).toFixed(1):'--'}</td>
                     </tr>
                 ))}
 
