@@ -1,15 +1,17 @@
-import { StudentTable } from "@/components/StudentTable";
-import { students } from "@/data/students";
+"use client"
 
-const Page = () => {
-  return (
-<div className="container mx-auto">
-  <h1 className="text-5xl mb-5">Lista de Estudantes</h1>
-    <StudentTable students={students}/>
+import { CustomButton } from "@/components/CustomButtom";
+
+const Page = () =>{
+
+
+  return(
+    <div className="w-screenh h-screen flex justify-center items-center">
+      <CustomButton label="Clique Aqui" />
+      <CustomButton label="Clique Aqui 2" />
+      <CustomButton label="Clique Aqui 3" />
     </div>
-
   );
-
 }
 
 export default Page;
