@@ -1,26 +1,27 @@
 "use client"
 
-import { FormEvent } from "react";
+import { useState } from "react";
+
+
 
 const Page = () => {
+      const [count, setCount] = useState(0);
 
-  const handleFormSubmit = (event: FormEvent) => {
-    event.preventDefault();
-
-    alert("foi!!!")
-
-  }
+      const handleClickButton = () => {
+        setCount(count + 1);
+      
+      }
 
 
   return (
-    <div className="w-screenh h-screen flex flex-col justify-center items-center">
-      <h1 className="text-5xl mb-3">Form de login</h1>
-      <form onSubmit={handleFormSubmit}>
-        <input type="text" />
-        <input type="submit" value="Enviar" />
-      </form>
+    <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl">
+      <p>{count}</p>
+      <button onClick={handleClickButton} className="bg-blue-500 p-3">+1</button>
     </div>
+
   );
 }
 
 export default Page;
+
+//hooks = funções que vai implementar uma funcionalidade específica em um componente
